@@ -1,0 +1,134 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+hr{
+  border: 1px solid rgba(255, 255, 255, 0.11);
+}
+body{
+  color: rgba(255, 255, 255, 0.600);
+  background-color: #010446;
+}
+.content{
+  margin: 0 auto;
+  max-width: 1050px;
+  width: 100%;
+}
+header{
+  margin-top: 80px;
+}
+header .wrapper-header{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-bottom: 30px;
+}
+header .wrapper-header .logo img{
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+}
+header .wrapper-header h1{
+  color: white;
+}
+header .wrapper-header p{
+  font-size: 14px;
+}
+main .content{
+  display: flex;
+}
+main .menu-steps{
+  padding: 20px 30px 20px 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.11);
+}
+main .menu-steps ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  text-align: right;
+  list-style: none;
+}
+main .menu-steps ul .step{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+main .menu-steps ul .step.active .tex-step p,
+main .menu-steps ul .step.active .point-step,
+main .menu-steps ul .step.active .icon-step{
+  background-color: #25cc88;
+  color: white !important;
+}
+main .menu-steps ul .step .point-step{
+  position: absolute;
+  right: -35px;
+  background-color: #494a7d;
+  border-radius: 50%;
+  clip-path: circle();
+  width: 10px;
+  height: 10px;
+}
+main .menu-steps ul .step .text-step{
+  white-space: nowrap;
+}
+main .menu-steps ul .step .text-step p{
+  color: white;
+  font-weight: bold;
+}
+main .menu-steps ul .step .text-step span{
+  font-size: 14px;
+}
+main .menu-steps ul .step .icon-step{
+  background-color: #494a7d;
+  border-radius: 50%;
+  clip-path: circle();
+  padding: 12px;
+}
+main .content-form{
+  width: 100%;
+  padding: 20px 0px 0px 30px;
+}
+main .content-form .header-form{
+  padding-bottom: 30px;
+}
+main .content-form .header-form p,span{
+  font-size: 14px;
+}
+main .content-form .header-form h3{
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+main .content-form form{
+  padding: 40px 0px 0px 0px;
+}
+main .content-form form .group-input{
+  margin-bottom: 15px;
+}
+main .content-form form label{
+  font-size: 15px;
+}
+main .content-form form input{
+  margin-top: 4px;
+  width: 100%;
+  height: 45px;
+  border-radius: 9px;
+  color: white;
+  border: 1px solid #25cc88;
+  outline: none;
+  background: transparent;
+  padding: 0 10px;
+}
+main .content-form form button{  
+  border: none;
+  background-color: #25cc88;
+  font-weight: bold;
+  color: white;
+  border-radius: 20px;
+  height: 40px;
+  width: 150px;
+  float: right;
+}
