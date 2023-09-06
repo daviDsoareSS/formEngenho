@@ -17,8 +17,8 @@
           <img src="logogit.png" alt="">
         </div>
         <div class="text">
-          <h1>Example with Steps UI</h1>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <h1>Formulário com etapas UI</h1>
+          <p>Apenas um formulário em desenvolvimento afim de estudos.</p>
         </div>
       </div>
     </div>
@@ -32,8 +32,8 @@
         <ul>
           <li class="step active">
             <div class="text-step">
-              <p>Your Name</p>
-              <span>Browse and upload</span>
+              <p>Dados pessoais</p>
+              <span>Nome e data de nascimento</span>
             </div>
             <div class="icon-step">
               <i class="fa-regular fa-user"></i>
@@ -42,8 +42,8 @@
           </li>
           <li class="step">
             <div class="text-step">
-              <p>Your Name</p>
-              <span>Browse and upload</span>
+              <p>Endereço </p>
+              <span>Browse and uploaddada </span>
             </div>
             <div class="icon-step">
               <i class="fa-regular fa-user"></i>
@@ -85,55 +85,72 @@
       </div>
       <div class="content-form">
         <div class="header-form">
-          <p>Step 1/5</p>
+          <p class="number-step">Etapa 1/5</p>
           <h3>Lorem ipsum dolor sit amet</h3>
           <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis non impedit qui ipsum</span>
         </div>
         <hr>
-        <form action="">
-          <div class="group-input">
-            <label for="">Enter your name</label>
-            <input type="text" placeholder="Enter your name...">
+        <form action="" id="form">
+          <div class="step-form" id="step1">
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="name" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-input">
+              <label for="">Data de nascimento</label>
+              <input id="date" type="date" placeholder="">
+            </div>
+            <button id="next1">Next Step</button>
           </div>
-          <div class="group-input">
-            <label for="">Enter your name</label>
-            <input type="text" placeholder="Enter your name...">
+
+          <div class="step-form" id="step2" style="display: none;">
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="address" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="city" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-buttons">
+              <button class="prev" id="prev2">Prev Step</button>
+              <button class="button-avanced" id="next2">Next Step</button>
+            </div>
           </div>
-          <div class="group-input">
-            <label for="">Enter your name</label>
-            <input type="text" placeholder="Enter your name...">
+
+          <div class="step-form" id="step3" style="display: none;">
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="name" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="name" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="name" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-input">
+              <label for="">Digite seu nome</label>
+              <input id="name" type="text" placeholder="Digite seu nome...">
+            </div>
+            <div class="group-buttons">
+              <button class="prev" id="prev3">Prev Step</button>
+              <button class="button-avanced" id="submit">Next Step</button>
+            </div>
           </div>
-          <div class="group-input">
-            <label for="">Enter your name</label>
-            <input type="text" placeholder="Enter your name...">
-          </div>
-          <button class="button-avanced">Next Step</button>
         </form>
       </div>
     </div>
   </main>
-
+  <footer>
+    <div class="content">
+      <p>Desenvolvido por <span><a href="">daviDsoareSS</a></span></p>
+    </div>
+  </footer>
   <script src="https://kit.fontawesome.com/639efb6961.js" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 
-  <script>
-    const buttonAvanced = document.querySelector('.button-avanced')
-    let steps = document.querySelectorAll('.menu-steps ul .step')
-    let i = 1;
-
-    steps.forEach((step) =>{
-      step.id = i++;
-
-      buttonAvanced.addEventListener('click', function(){
-       
-          step.classList.add('active')
-        
-      })
-
-      
-
-      console.log(step)
-    })
-
-  </script>
 </body>
 </html>

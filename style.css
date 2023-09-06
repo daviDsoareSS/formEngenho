@@ -73,6 +73,8 @@ main .menu-steps ul .step .point-step{
 }
 main .menu-steps ul .step .text-step{
   white-space: nowrap;
+  max-width: 170px;
+  width: 100%;
 }
 main .menu-steps ul .step .text-step p{
   color: white;
@@ -122,8 +124,14 @@ main .content-form form input{
   background: transparent;
   padding: 0 10px;
 }
+main .content-form form .group-buttons{
+  display: flex;
+  gap: 10px;
+  float: right;
+}
 main .content-form form button{  
   border: none;
+  cursor: pointer;
   background-color: #25cc88;
   font-weight: bold;
   color: white;
@@ -131,4 +139,46 @@ main .content-form form button{
   height: 40px;
   width: 150px;
   float: right;
+}
+main .content-form form .group-buttons button.prev{
+  background-color: #b4b4b4;
+}
+footer{
+  bottom: 0;
+  padding: 10px;
+  text-align: center;
+  background-color: #494a7d;
+  margin-top: 5rem;
+}
+
+@media(max-width: 900px){
+  header .wrapper-header{
+    padding: 20px;
+  }
+  main .content{
+    flex-direction: column;
+  }
+  main .menu-steps {
+    border: none;
+  }
+  main .menu-steps ul{
+    padding-left: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .menu-steps ul .step .text-step{
+    display: none;
+  }
+  main .menu-steps ul .step .point-step {
+    position: absolute;
+    bottom: -20px;
+    right: 12px;
+  }
+  main .content-form{
+    padding: 20px;
+  }
+  main .content-form form .group-buttons{
+    float: none;
+    justify-content: center;
+  }
 }
