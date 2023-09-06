@@ -40,7 +40,7 @@ main .content{
   display: flex;
 }
 main .menu-steps{
-  padding: 20px 30px 20px 15px;
+  padding: 20px 50px 20px 15px;
   border-right: 1px solid rgba(255, 255, 255, 0.11);
 }
 main .menu-steps ul{
@@ -56,6 +56,19 @@ main .menu-steps ul .step{
   align-items: center;
   gap: 15px;
 }
+main .menu-steps ul .step::before{
+  content: "";
+  position: absolute;
+  right: 18px;
+  top: 20px;
+  z-index: -1;
+  width: 1px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.11);
+}
+main .menu-steps ul .step:last-child::before{
+  display: none;
+}
 main .menu-steps ul .step.active .tex-step p,
 main .menu-steps ul .step.active .point-step,
 main .menu-steps ul .step.active .icon-step{
@@ -64,8 +77,9 @@ main .menu-steps ul .step.active .icon-step{
 }
 main .menu-steps ul .step .point-step{
   position: absolute;
-  right: -35px;
-  background-color: #494a7d;
+  right: -55.5px;
+  border: 3px solid rgba(255, 255, 255, 0.11);
+  background-color: #010446;
   border-radius: 50%;
   clip-path: circle();
   width: 10px;
@@ -111,6 +125,7 @@ main .content-form form .group-input{
   margin-bottom: 15px;
 }
 main .content-form form label{
+  color: white;
   font-size: 15px;
 }
 main .content-form form input{
@@ -137,7 +152,7 @@ main .content-form form button{
   color: white;
   border-radius: 20px;
   height: 40px;
-  width: 150px;
+  width: 120px;
   float: right;
 }
 main .content-form form .group-buttons button.prev{
@@ -166,13 +181,18 @@ footer{
     flex-direction: row;
     justify-content: space-between;
   }
+  main .menu-steps ul .step::before {
+    right: 0px;
+    top: -15px;
+    rotate: 90deg;
+  }
   main .menu-steps ul .step .text-step{
     display: none;
   }
   main .menu-steps ul .step .point-step {
     position: absolute;
     bottom: -20px;
-    right: 12px;
+    right: 13px;
   }
   main .content-form{
     padding: 20px;
